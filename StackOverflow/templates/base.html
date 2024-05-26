@@ -1,0 +1,51 @@
+
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <head>
+      {% load static %}
+        <meta charset="utf-8">
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+        <link href="{% static 'css/bootstrap.css'%}" rel="stylesheet" crossorigin="anonymous">
+        <link href="{%static 'css/style.css'%}" rel="stylesheet" crossorigin="anonymous">
+    </head>
+</head>
+<body>
+  
+{% if is_auth %}
+    {% include 'user.html' %}
+{% else %}
+    {% include 'inc/no-user.html' %}
+{% endif %}
+  {% block newasks %} {% endblock %} 
+  {% block hotasks %} {% endblock %} 
+  <main>
+    {% block hotask %} {% endblock %} 
+    <div class="tagsglav">
+      <h2> Popular Tags</h2>
+      <div class="tagglav">
+          <h4>perl python TechnoPark</h4>
+          <h4>MySQL django</h4>
+      </div>
+    </div>
+    <div class="members">
+      <h2> Best Members </h2>
+      <div class="member">
+        <h4> Olya </h4> 
+        <h4> Manya </h4>
+        <h4> Vasya </h4>
+        <h4> Pupkin </h4>
+      </div>
+    </div> 
+</main>  
+    
+  {% block allask %} {% endblock %}  
+  {% block newask %} {% endblock %} 
+  {% block setting %} {% endblock %} 
+  {% block tag %} {% endblock %} 
+  {%block answers%} {% endblock %}
+  {% include 'inc/paginator.html' %}  
+  {% include 'inc/footer.html' %}   
+  </body>
+</html>  

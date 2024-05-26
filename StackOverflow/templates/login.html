@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block setting %}
+<div class="title-new-ask">
+  <h2>Log In</h2>
+</div>
+<div class="setting">
+  <div class="toask">
+    <form method="post">
+      <label for="login">Login</label>
+      <input type="login" id="login" name="login" placeholder="Write your login">
+      <br>
+      <br>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Write your password">
+      </div>
+      <br>
+      <button type="submit">Log In</button>
+      <br>
+        <a href="{% url 'reg'%}" class="reg">Create new account </a>  
+    </form>
+  </div>
+</div>
+{% endblock %}  
