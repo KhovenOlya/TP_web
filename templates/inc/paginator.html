@@ -1,0 +1,19 @@
+{% load static %}
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" crossorigin="anonymous">
+<link href="{% static 'css/style.css' %}" rel="stylesheet" crossorigin="anonymous">
+
+<div class="pagination ps-4">
+    {% for num in data.text.paginator.page_range %}
+        {% if num == 1 or num == data.text.paginator.num_pages %}
+            <a href="?page={{ num }}" class="pagination-element me-2">{{ num }}</a>
+        {% elif num >= data.text.number|add:-2 and num <= data.text.number|add:2 %}
+            {% if num == data.text.number %}
+                <span class="pagination-element current-page me-2">{{ num }}</span>
+            {% else %}
+                <a href="?page={{ num }}" class="pagination-element me-2">{{ num }}</a>
+            {% endif %}
+        {% elif num == data.text.number|add:-3 or num == data.text.number|add:3 %}
+            <span class="me-2">...</span>
+        {% endif %}
+    {% endfor %}
+</div>

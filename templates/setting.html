@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block setting %}
+<div class="title-new-ask">
+  <h2>Setting: {{user.name}}</h2>
+</div>
+<div class="setting">
+  <div class="toask">
+    <form method="post">
+      <label for="login">Login</label>
+      <input type="login" id="login" name="login" placeholder="{{user.login}}">
+    
+      <br>
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" placeholder="{{user.email}}">
+      <br>
+      <label for="NickName">Name</label>
+      <input type="text" id="NickName" name="NickName" placeholder="{{user.name}}">
+      <div class="upload-avatar">
+        <label for="ava">Upload avatar</label>
+        <input type="file" name="ava" id="formAva">
+      </div>
+      <br>
+      <button type="submit">Save</button>
+    </form>
+  </div>
+</div>
+{% endblock %}  

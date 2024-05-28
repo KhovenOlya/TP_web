@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+        <link href="{% static 'css/bootstrap.css'%}" rel="stylesheet" crossorigin="anonymous">
+        <link href="{%static 'css/style.css'%}" rel="stylesheet" crossorigin="anonymous">
+    </head>
+</head>
+<body>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <strong>ask.fm</strong>
+            </a>
+            <div class="links">
+                <a class="Home" href="{%url 'que'%}">Home</a>  
+                <a class="Setting" href="{%url 'setting'%}">Setting</a>  
+            </div>
+        
+            <div class="find">
+                <form>
+                    <input type="text">
+                    <button type="submit"></button>
+                </form>
+            </div>
+            
+    </div>
+</body>
+</html>      

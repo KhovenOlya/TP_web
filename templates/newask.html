@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block newask %}
+<div class="title-new-ask">
+  <h2> New Question</h2>
+</div>
+<div class="newask">
+  <!-- Здесь может быть ваше содержимое страницы -->
+  <div class="toask">
+    <form method="post">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title">
+      <br>
+      <label for="subject">Text</label>
+      <input type="text" id="subject" name="subject" placeholder="">
+      <br>
+      <label for="subject">Tags</label>
+      <input type="text" id="tags" name="tags" placeholder="">
+      <br>
+      <button type="submit">Ask</button>
+    </form>
+  </div>
+</div>
+{% endblock %}  

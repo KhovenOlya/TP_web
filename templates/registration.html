@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block setting %}
+<div class="title-new-ask"
+  <h2>Regitration</h2>
+</div>
+<div class="setting">
+  <div class="toask">
+    <form method="post">
+      <label for="login">Login</label>
+      <input type="login" id="login" name="login" placeholder="Create your login">
+    
+      <br>
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" placeholder="Write your email">
+      <br>
+      <label for="NickName">Name</label>
+      <input type="text" id="NickName" name="NickName" placeholder="Write your email">
+      <br>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Create your password">
+      <br>
+      <label for="password">Repeat pasword</label>
+      <input type="password" id="password" name="password" placeholder="Repeat please">
+      <br>
+      <div class="upload-avatar">
+        <label for="ava">Upload avatar</label>
+        <input type="file" name="ava" id="formAva">
+      </div>
+      <br>
+      <button type="submit">Register!</button>
+    </form>
+  </div>
+</div>
+{% endblock %}  
